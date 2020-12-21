@@ -1,7 +1,12 @@
 
 *{
     margin:.2%;
-}
+} 
+
+body { 
+    opacity: 0; 
+    transition: opacity 5s; 
+} 
 
 #headArea {
     padding-bottom:2%;
@@ -30,4 +35,35 @@
     font-size:24px;
     color: #A63F3A;
     transition: 0.2s;
+}
+
+#projectsContainer{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box1 {
+    border:1px solid #A63F3A ;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    display: inline-block;
+}
+
+.box1 img{
+    float:left;
+    padding:10px;
+}
+
+.box2 {
+    border:1px solid #A63F3A ;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    display: inline-block;
+}
+
+.box2 img{
+    float:right;
+    padding:10px;
 }

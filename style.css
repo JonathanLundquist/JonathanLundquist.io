@@ -1,5 +1,19 @@
+*{
+    margin:.2%;
+}
+
+#headArea {
+    padding-bottom:2%;
+}
 
 #headArea li {
     display:inline;
-    float:left;
+    float:right;
+    padding-left: 2%;
+}
+
+#headArea li a:link, a:visited, a:hover, a:active {
+    color:black;
+    list-style: none;
+    text-decoration: none;
 }

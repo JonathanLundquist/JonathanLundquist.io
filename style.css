@@ -3,11 +3,6 @@
     margin:.2%;
 } 
 
-body { 
-    opacity: 0; 
-    transition: opacity 5s; 
-} 
-
 #headArea {
     padding-bottom:2%;
 }

@@ -1,16 +1,38 @@
 
 *{
-    margin:.2%;
+    margin:0;
+    animation: loadInFade ease 1s;
+} 
+/*Animation keyframes*/
+
+@keyframes loadInFade { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
 } 
 
 #headArea {
-    padding-bottom:2%;
+    padding-bottom:70px;
     margin:0;
+    background-color:black;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
 }
 
 #headArea h1 {
     float:left;
-    color: #A63F3A;
+    color:white;
+    padding-left:4%;
+}
+
+#headArea img{
+    width:4%;
+    position: fixed;
+    margin-top:-0.5%;
 }
 
 #headArea li {
@@ -20,7 +42,7 @@
 }
 
 #headArea li a, a:link, a:visited, a:active {
-    color:#8A817C;
+    color: #8A817C;
     list-style: none;
     text-decoration: none;
     font-size:large;
@@ -29,13 +51,14 @@
 
 #headArea a:hover {
     font-size:24px;
-    color: #A63F3A;
+    color:white;
     transition: 0.2s;
 }
 
 #projectsContainer{
     text-align: center;
     vertical-align: middle;
+    padding-top:20px;
 }
 
 .box1 {

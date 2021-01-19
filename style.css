@@ -33,6 +33,12 @@
     width:4%;
     position: fixed;
     margin-top:-0.5%;
+    transition: .2s ease-in-out 0s;
+}
+
+#headArea img:hover{
+    transform: rotate(-15deg);
+    transition: .2s ease-in-out 0s;
 }
 
 #headArea li {
@@ -55,34 +61,35 @@
     transition: 0.2s;
 }
 
-#projectsContainer{
+
+.mainContainer{
+    width:80%;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+
+.mainContainer h1{
     text-align: center;
-    vertical-align: middle;
-    padding-top:20px;
+    padding-top:25px;
 }
 
-.box1 {
-    border:1px solid #A63F3A ;
+#aboutMeContainer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutMeImage {
+    width:200%;
+}
+
+#aboutMeImage img{
     width:80%;
-    margin-left:auto;
-    margin-right:auto;
-    display: inline-block;
 }
 
-.box1 img{
-    float:left;
-    padding:10px;
-}
-
-.box2 {
-    border:1px solid #A63F3A ;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
-    display: inline-block;
-}
-
-.box2 img{
-    float:right;
-    padding:10px;
+#currentProjectContainer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -93,3 +93,14 @@
     align-items: center;
     justify-content: center;
 }
+
+#contentFooter {
+    margin-top:25px;
+    padding:15px;
+    text-align:center;
+    background-color: black;
+    color:white;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+}

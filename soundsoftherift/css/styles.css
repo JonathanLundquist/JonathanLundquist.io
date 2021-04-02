@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Asul&display=swap');
+
+* {
+    margin:0;
+}
+
+body {
+    background:url("../images/background.png") no-repeat fixed center;
+    background-size:cover;
+}
+
+header {
+    height:150px;
+    margin-top:75px;
+    font-size:35px;
+    text-shadow: 5px 5px #404138;
+}
+
+h1 {
+    font-family: 'Asul', sans-serif;
+    text-align:center;
+    color: #EDB852;
+}
+
+#menuWrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:25%;
+    font-family: 'Asul', sans-serif;
+}
+
+#menuWrapper select {
+    display: block;
+	font-size: 16px;
+    font-family: 'Asul', sans-serif;
+	font-weight: 700;
+	color: #EDB852;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	margin: 0;
+	border: 1px solid #aaa;
+	border-radius: .5em;
+    background-color: rgb(19, 24, 27, 0.7);
+    outline:none;
+}
+
+#menuWrapper select option{
+    background-color:white;
+    color:#13181B;
+}
+
+#menuWrapper select option:after{
+    background-color:#404138;
+    color:#13181B;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    gap: 1.56em;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.key {
+    border: 2px solid black;
+    border-radius: 360px;
+    font-size: 18px;
+    padding: 15px 8px;
+    transition: .1s ease;
+    width: 150px;
+    text-align: center;
+    color: white;
+    background:rgb(19, 24, 27, 0.5);
+    text-shadow: #13181B;
+}
+
+.playing {
+    transform: scale(0.9);
+    border-color: #7a8053;
+    box-shadow: 0 0 25px #EDB852;
+    background-color:black;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+    background:none;
+    border-radius: 360px;
+    color:#EDB852;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffc600;
+    background:none;
+}
+
+#footerWrapper {
+    width:80%;
+    margin-left:10%;
+    margin-right:auto;
+    position: fixed;
+    bottom:0;
+    margin-bottom:5px;
+    font-size:small;
+    text-align: center;
+    color:#EDB852;
+    text-shadow: 1px 1px #404138;
+}
+
+#footerWrapper a, a:visited{
+    color: #ffc600;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #championImg {
+        opacity: 0%;
+    }
+
+    #menuWrapper {
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        font-family: 'Asul', sans-serif;
+        padding-top:25px;
+    }
+
+    body {
+      background-color: #282923;
+      background-image: none;
+    }
+
+    .buttons {
+        display: grid;
+        gap:0px;
+        grid-template-columns: auto;
+        width:100%;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .key {
+        border-radius:0px;
+        font-size: 18px;
+        padding: 15px 10px;
+        transition: .1s ease;
+        width: 100%;
+        text-align: center;
+    }
+    
+
+    #footerWrapper {
+        width:80%;
+        font-size: small;
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        bottom:0;
+        margin-top:25px;
+        text-align: center;
+        color:#EDB852;
+        text-shadow: 1px 1px #404138;
+    }
+  }

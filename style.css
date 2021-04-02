@@ -78,6 +78,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    line-height:25px;
 }
 
 #aboutMeImage {
@@ -92,6 +93,12 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    line-height:25px;
+}
+
+#currentProjectImage img{
+    width:90%;
+    padding-left:5%;
 }
 
 #contentFooter {

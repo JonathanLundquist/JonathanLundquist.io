@@ -126,10 +126,6 @@ kbd {
 
 @media only screen and (max-width: 600px) {
 
-    #championImg {
-        opacity: 0%;
-    }
-
     #menuWrapper {
         margin-left:auto;
         margin-right:auto;
@@ -138,8 +134,12 @@ kbd {
         padding-top:25px;
     }
 
+    #menuWrapper select {
+        color: #f8f8f8;
+    }
+
     body {
-      background-color: #282923;
+      background-color: #0d0622;
       background-image: none;
     }
 

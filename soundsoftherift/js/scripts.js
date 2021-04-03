@@ -29,6 +29,7 @@ function loadSelection() {
     .then(data => {
         for (var i = 0; i < data.length; i++) {
             elem.innerHTML = elem.innerHTML + "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+
         }
     })
     .catch(err => alert(err));

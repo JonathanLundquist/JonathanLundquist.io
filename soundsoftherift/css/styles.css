@@ -119,6 +119,11 @@ kbd {
     color: #ffc600;
 }
 
+#preloaded img{
+    opacity: 0%;
+    width:1px;
+}
+
 @media only screen and (max-width: 600px) {
 
     #championImg {

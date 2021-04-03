@@ -1,6 +1,7 @@
-//Handles fetching the character Json, and loading the proper audio
+//Path tp the JSON file
 const url = `characters.json`;
 
+//Handles fetching the character Json, and loads the proper audio
 function getAudio() {
     fetch(url)
     .then(response => response.json())
@@ -11,7 +12,7 @@ function getAudio() {
         if (!val) return;
 
         val--;
-        //Changes the background image when a new champion is selected
+        //Swaps out the audio when a new champion is selected
         document.getElementById('theBody').style.backgroundImage = 'url("images/' + data[val].image + '")';
         for (var i=1; i < 9; i++) {
             document.getElementById("audio"+i).src = "sounds/" + eval(`data[${val}].audio${i}`);
@@ -20,16 +21,17 @@ function getAudio() {
     .catch(err => alert(err));
 }
 
-//Handles dynamically building the champion selection
+//Handles dynamically building the champion selection and preloads the images
 function loadSelection() {
-    var elem = document.getElementById('sel');
+    var selElem = document.getElementById('sel');
+    var imgElem = document.getElementById('preloaded');
 
     fetch(url)
     .then(response => response.json())
     .then(data => {
         for (var i = 0; i < data.length; i++) {
-            elem.innerHTML = elem.innerHTML + "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
-
+            selElem.innerHTML += "<option value='"+data[i].id + "'>"+data[i].name+"</option>";
+            imgElem.innerHTML += "<img src='images/"+data[i].images+"'>";
         }
     })
     .catch(err => alert(err));
@@ -42,7 +44,7 @@ function removeTransition(elem) {
 }
 
 
-//Dynamically get the sound based on the pressed key, and play the proper sound
+//Dynamically gets and plays the audio based on the pressed key
 function playAudio(e) {
     const audio = document.querySelector("audio[data-key='"+e.keyCode+"']");
     const key = document.querySelector("div[data-key='"+e.keyCode+"']");
@@ -51,11 +53,17 @@ function playAudio(e) {
 
     //Adds the playing CSS to a button
     key.classList.add('playing');
-    //Stops audio from playing over itself if the same sound is selected twice
+    //Stops the audio from playing over itself if the same sound is selected twice
     audio.currentTime = 0;
     audio.play();
 }
 
+//handles getting the date for the footer
+var a = new Date();
+var currentYear = a.getFullYear();
+document.getElementById("currentYear").innerHTML = currentYear;
+
+//EVENT LISTENERS
 
 //Forces the list to build on windows load
 window.onload = loadSelection();
@@ -68,8 +76,3 @@ const keys = Array.from(document.querySelectorAll('.key'));
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 //Allows the KBD's to be clicked as well and still function
 keys.forEach(key => key.addEventListener('click', function(e) { document.querySelector("audio[data-key='"+this.dataset.key+"']").play(); }));
-
-//handles getting the date for the footer
-var a = new Date();
-var currentYear = a.getFullYear();
-document.getElementById("currentYear").innerHTML = currentYear;

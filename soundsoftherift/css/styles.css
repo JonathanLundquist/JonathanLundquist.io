@@ -76,7 +76,7 @@ h1 {
     text-align: center;
     color: white;
     background:rgb(19, 24, 27, 0.5);
-    text-shadow: #13181B;
+    text-shadow: 1px 1px #13181b;
 }
 
 .playing {

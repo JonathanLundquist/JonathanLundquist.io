@@ -290,7 +290,7 @@
     "audio1": "Permission-laugh1.wav",
     "audio2": "Permission-joke.wav",
     "audio3": "Permission-attack1.wav",
-    "audio4": "Permission-dying1.wav",
+    "audio4": "nosound.mp3",
     "audio5": "nosound.mp3",
     "audio6": "Permission-move1.wav",
     "audio7": "Permission-taunt.wav",
